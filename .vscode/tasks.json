@@ -8,6 +8,8 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
+				"${fileDirname}/namesp.cpp",
+				"-I${fileDirname}",
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"

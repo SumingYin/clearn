@@ -1,4 +1,5 @@
-
+#include <iostream>
+using namespace std;
 long indeed(int);
 long indeed(int n)
 {
@@ -27,6 +28,7 @@ int main()
     double xx = 2.2;
     decltype(xx) valx; // double valx
     decltype((xx)) refx; // double & refx
+    cin.get();
 }
 
 // when use function template,if we want to return a unknown type vlaue ,we can use "auto style" function announcement
