@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <typeinfo>
 #include "coordin.h"
 using namespace std;
 class Entity
@@ -77,8 +78,21 @@ void changeConstValueToSeeInternalChange()
     *pd = 2.0;
 }
 
-int main()
+static int count = 0;
+class Point
 {
+public:
+Point(){count++;}
+};
+
+int main()
+{   Point p1,p2 [4],*p3;
+    int oneArray [2] {1,2};
+    p3 = p2;
+    cout << "count=" << count << endl;// what do you think the value of count? it's 5.
+    int x = 10;
+    int y = 20;
+    cout << typeid((int) x / y * 2).name() << endl; 
     string str1;
     // changeConstValueToSeeInternalChange(); add this will have segmentation fault,you can see the detail above.
     cout << "progress here" << endl;

@@ -8,7 +8,7 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				"${fileDirname}/namesp.cpp",
+				"${fileDirname}/classLearnstock00.cpp",
 				"-I${fileDirname}",
 				"${file}",
 				"-o",
