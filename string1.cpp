@@ -15,7 +15,8 @@ int String::HowMany()
 
 //class methods
 String::String(const char * s)
-{
+{   
+    std::cout << "from String(const char *s )temp num_strings val : " << num_strings << std::endl;
     len = std::strlen(s);
     str = new char(len+1);
     std::strcpy(str,s);
@@ -28,11 +29,13 @@ String::String()
     str =new char[1];
     str[0] = '\0';
     num_strings++;
+    std::cout << "from String() and temp num_strings val : " << num_strings << std::endl;
 }
 
 String::String(const String & st) // copy constructor
-{
+{   
     num_strings++;
+    std::cout << "from String(const String & st) and temp num_strings val : " << num_strings << std::endl;
     len = st.len;
     str = new char [len + 1];
     std::strcpy(str,st.str);

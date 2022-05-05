@@ -2,7 +2,7 @@
 // compile with string1.cpp
 #include <iostream>
 #include "string1.h"
-const int ArSize = 10;
+const int ArSize = 11;
 const int MaxLen = 81;
 
 int main()
@@ -18,6 +18,10 @@ int main()
     String sayings[ArSize]; // array of Objects
     char temp[MaxLen]; // temporary string storage
     int i;
+    // const char * testc = "the ArSize string";
+    // sayings[ArSize] = testc; // munmap_chunk():invalid pointer,Aborted (core dumped)
+    cout << "class object ArcSize length's value " << sayings[ArSize] << endl; // this can output some unknown value and doesn't call error from compiler
+    // cout << "class object ArcSize length's value " << sayings[ArSize + 1] << endl; // this results segmentation fault (core dumped) doesn't show output,different from above line 
     for(i = 0;i < ArSize;i++)
     {
         cout << i + 1 << ": ";
@@ -51,7 +55,8 @@ int main()
         cout << "Shortest saying :\n" << sayings[shortest] << endl;
         cout << "First alphabetically: \n" << sayings[first] << endl;
         cout << "This program used " << String::HowMany() << " String objects.Bye.\n";
-
+        // this program used 11 String object,why?
+        // it should be 10 at most,think about it.
 
     }
     else
