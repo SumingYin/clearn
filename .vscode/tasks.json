@@ -9,7 +9,7 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				//"${fileDirname}/classLearnstock00.cpp",
-				"${fileDirname}/vector.cpp",
+				"${fileDirname}/string1.cpp",
 				"-I${fileDirname}",
 				"${file}",
 				"-o",

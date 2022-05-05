@@ -7,7 +7,21 @@
 
 
 int main()
-{
+{   
+
+    // test about cin
+    char temp [5];
+    std::cin.get(temp,5);
+    std::cout << "temp :" << temp << std::endl;
+    char c = std::cin.get();
+    
+    while( c!='\n')
+    {
+        std::cout << c << std::endl;
+        c = std::cin.get();
+    }
+        
+
 
     using namespace std;
     using VECTOR::Vector;
