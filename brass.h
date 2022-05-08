@@ -16,7 +16,7 @@ public:
 	virtual void Withdraw(double amt); // virtual function 
 	double Balance() const;
 	virtual void ViewAcct() const;
-	virtual ~Brass(){};
+	virtual ~Brass(){}; // need the virtual destructor function,so that destructor function can depend on the real object of class,if reference is father,it can destructor father memory;if reference is son,it can destructor son memory,then father memory.
 };
 
 // Brass Plus Account Class
