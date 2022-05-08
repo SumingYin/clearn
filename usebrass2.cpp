@@ -1,6 +1,7 @@
 // usebrass2.cpp -- polymorphic example
 // compile with brass.cpp
-
+// note:principle of use virtual function
+// when we try to redefine function in son class about father class,we should set it to virtual function.
 #include <iostream>
 #include <string>
 #include "brass.h"
